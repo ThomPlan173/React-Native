@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, View, StyleSheet, ScrollView } from 'react-native';
-
+import {Header} from '../components/Header'
 
 // You can import from local files
 
@@ -17,12 +17,10 @@ export default function LoginScreen () {
 
     <ScrollView>
 
-      <View style={styles.container}>
-         <Headline style={styles.headline}>Welcome to StartPort</Headline>
-      </View>
+     <Header title = "Welcome to Starport" />
 
         <View  style={styles.form}>
-            <React.Fragment>
+            <>
                 <TextInput autoComplete={true} style={styles.input} label="Email" value={text}
                 onChangeText={text => setText(text)}/>
                 <TextInput  autoComplete={true} style={styles.input} label="Password" value={text}
@@ -30,7 +28,7 @@ export default function LoginScreen () {
                 <Button mode="contained" onPress={() => console.log('Pressed')}>
                 Login
                 </Button>  
-            </React.Fragment>
+            </>
                 <Text style={styles.parag}>Read Conditions and Terms </Text>
         </View> 
     </ScrollView>
