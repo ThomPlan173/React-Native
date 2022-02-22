@@ -1,7 +1,7 @@
 import React from "react";
 import { SafeAreaView, StyleSheet, Text, StatusBar, View } from "react-native";
 
-import { default as data } from "../../api/data.json";
+import { default as data } from "../../api/data2.json";
 
 export const StarshipFeedScreen = () => {
   return (
