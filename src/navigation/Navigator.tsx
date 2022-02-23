@@ -12,9 +12,12 @@ const Stack = createNativeStackNavigator();
 export const Navigator = (props: Props) => {
   return (
     <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen name={Routes.LOGIN_SCREEN} component={LoginScreen} />
+        <Stack.Navigator
+          screenOptions={{ headerShown: false }}
+        >
+            <Stack.Screen name={Routes.LOGIN_SCREEN} component={LoginScreen}  />
             <Stack.Screen name={Routes.TERMS_SCREEN} component={TermsScreen} />
+            
         </Stack.Navigator>
     </NavigationContainer>
   )
