@@ -1,20 +1,13 @@
 import React from "react";
 import { View, Text, Image } from "react-native";
 import { Appbar, Title } from "react-native-paper";
+import { Routes } from '../navigation/Routes'
 
 export const TermsScreen = () => {
-  function goBack() {
-    // We need to use the screen props `{navigation}` to navigate back
-    // it will be introduced in the next lesson `react-navigation`
-    alert("goBack pressed!");
-  }
 
   return (
     <View>
-      <Appbar.Header>
-        <Appbar.BackAction onPress={goBack} />
-        <Appbar.Content title="Terms and Conditions" />
-      </Appbar.Header>
+      
       <View style={{ padding: 32 }}>
         <Text>
           This Terms of Service, including all supplemental terms as amended
