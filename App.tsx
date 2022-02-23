@@ -1,16 +1,18 @@
 
 import React from 'react';
-import  LoginScreen  from './src/screens/LoginScreen';
-import { TermsScreen } from './src/screens/TermsScreen';
-import { StarshipFeedScreen } from './src/screens/StarshipFeedScren';
+import { StarshipFeedScreen } from './src/screens/StarshipFeedScreen';
+import { QueryClient, QueryClientProvider } from 'react-query'
+import { NetworkProvider } from 'react-native-offline';
+
+ const queryClient = new QueryClient()
 const App = () => {
    //<LoginScreen />;
   // <TermsScreen />;
   //<StarshipFeedScreen />;
   
-  return (
-    <StarshipFeedScreen />
-  )
+  return <QueryClientProvider client={queryClient}><StarshipFeedScreen /></QueryClientProvider>
+    
+  
 };
 
 export default App;
