@@ -2,7 +2,8 @@ import React from "react";
 import { SafeAreaView, StyleSheet, Text, StatusBar, View, FlatList } from "react-native";
 import {Card } from 'react-native-paper';
 import { useStarships } from "../hooks/useStarships";
-import { NetworkProvider } from 'react-native-offline';
+//import { NetworkProvider } from 'react-native-offline';
+import { Offline } from "./offline";
 
 const renderItem = ({ item }) => {
 
@@ -29,7 +30,8 @@ export const StarshipFeedScreen = () => {
    console.log("bonjour", data)
 
   if (isLoading) {
-   return  <Text>loading</Text>
+   //return  <Text>loading...</Text>
+   return  <Text>{Offline}</Text>
   }
 
   if (isError) {
